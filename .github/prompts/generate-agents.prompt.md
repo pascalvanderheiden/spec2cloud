@@ -3,31 +3,28 @@ mode: devlead
 ---
 # Generate AGENTS.md from Guidelines
 
-Your task is to read the project guidelines from the `/standards/` folder and create comprehensive AGENTS.md files that summarize all relevant rules and best practices for either backend or frontend development.
+Your task is to read the project guidelines from the `/standards/` folder and create a comprehensive AGENTS.md file that summarizes all relevant rules and best practices for development.
 
-## For Backend AGENTS.md
-When creating a backend AGENTS.md file, you must:
-1. Read and synthesize content from:
-   - `/standards/general/general-guidelines.md` (general principles)
-   - `/standards/backend/backend-guidelines.md` (backend-specific guidelines)
-2. Create a comprehensive AGENTS.md file in the target backend folder
-3. Organize the content logically based on the structure and topics defined in the guidelines
+## Reading Guidelines
 
-## For Frontend AGENTS.md
-When creating a frontend AGENTS.md file, you must:
-1. Read and synthesize content from:
-   - `/standards/general/general-guidelines.md` (general principles)
-   - `/standards/frontend/frontend-guidelines.md` (frontend-specific guidelines)
-2. Create a comprehensive AGENTS.md file in the target frontend folder
+When creating the AGENTS.md file, you must:
+1. Read and synthesize content from all guidelines in `/standards/`:
+   - `/standards/general/` (general principles applicable to all development)
+   - `/standards/backend/` (backend-specific guidelines, if present)
+   - `/standards/frontend/` (frontend-specific guidelines, if present)
+   - `/standards/data/` (data engineering and database guidelines, if present)
+   - `/standards/ai/` (AI/ML development guidelines, if present)
+   - Any other domain-specific standards folders that may exist
+2. Create a comprehensive AGENTS.md file in the project root
 3. Organize the content logically based on the structure and topics defined in the guidelines
 
 ## Guidelines for Content Synthesis
 
-1. **Be Comprehensive**: Include ALL relevant guidelines from both general and domain-specific files
+1. **Be Comprehensive**: Include ALL relevant guidelines from all available sources
 2. **Maintain Clarity**: Organize content in a logical, hierarchical structure
 3. **Preserve Details**: Keep specific technical details, version numbers, package names, and configuration examples
 4. **Use Markdown Formatting**: Proper headers, lists, code blocks, and tables for readability
-5. **Cross-reference**: When general and specific guidelines overlap, merge them coherently
+5. **Integrate Seamlessly**: When guidelines from different domains overlap, merge them coherently
 6. **Highlight Critical Rules**: Emphasize non-negotiable requirements (e.g., type safety, security, testing coverage)
 7. **Include Examples**: Keep code samples and configuration snippets where provided
 8. **Maintain Consistency**: Use consistent terminology and formatting throughout
@@ -40,22 +37,40 @@ The generated AGENTS.md should follow this structure:
 # AGENTS.md
 
 ## Mission
-[Mission statement from general guidelines]
+[Mission statement from guidelines]
 
 ## Guiding Principles
-[Combined principles from general and domain-specific guidelines]
+[Combined principles from all guidelines]
 
 ## Canonical Stack
-[Technology stack table with details]
+[Technology stack table with details for all components]
 
 ## Architecture Blueprint
 [Architecture patterns and structure]
 
-## [Domain]-Specific Playbook
-[Detailed implementation guidelines for backend or frontend]
+## Development Playbook
+[Detailed implementation guidelines organized by domain]
+
+### Backend Development
+[Backend-specific guidelines, if applicable]
+
+### Frontend Development
+[Frontend-specific guidelines, if applicable]
+
+### Data Engineering
+[Data and database guidelines, if applicable]
+
+### AI/ML Development
+[AI and machine learning guidelines, if applicable]
+
+### [Other Domains]
+[Additional domain-specific guidelines as discovered]
+
+### Full-Stack Patterns
+[Cross-cutting patterns and integrations]
 
 ## Agent-First Delivery
-[Agent integration patterns if applicable]
+[Agent integration patterns and workflows]
 
 ## Shared Engineering Systems
 [Code quality, documentation, secrets management, etc.]
@@ -79,11 +94,11 @@ The generated AGENTS.md should follow this structure:
 ## Execution Steps
 
 When invoked:
-1. **Clarify the target**: Ask whether they want backend or frontend AGENTS.md (if not specified)
-2. **Read the guidelines**: Always read the latest content from the `/standards/` folder
-3. **Synthesize content**: Combine general and domain-specific guidelines
-4. **Generate the file**: Create a comprehensive, well-structured AGENTS.md file
-5. **Confirm completion**: Let the user know the file has been created and where
+1. **Discover available guidelines**: Scan the `/standards/` folder for all available guidelines
+2. **Read all guidelines**: Always read the latest content from all guideline files
+3. **Synthesize content**: Combine and organize guidelines into a cohesive document
+4. **Generate the file**: Create a comprehensive, well-structured AGENTS.md file in the project root
+5. **Confirm completion**: Let the user know the file has been created
 
 ## Important Notes
 
@@ -91,4 +106,5 @@ When invoked:
 - Ensure no guidelines are omitted - completeness is critical
 - Maintain the technical accuracy of all specifications, package names, and version requirements
 - Keep the document maintainable - use clear sections and proper formatting
-- If guidelines conflict, prefer the domain-specific guidelines over general ones
+- If guidelines conflict, prefer more specific guidelines over general ones
+- Adapt the structure based on what guidelines are actually available (e.g., backend-only, frontend-only, full-stack, data-focused, AI/ML-focused, or any combination of domains)

@@ -1,6 +1,7 @@
-# spec2win
 
-**Spec2Win** is an AI-powered development workflow that transforms high-level product ideas into production-ready applications deployed on Azure—using specialized GitHub Copilot agents working together.
+# spec2cloud
+
+**Spec2Cloud** is an AI-powered development workflow that transforms high-level product ideas into production-ready applications deployed on Azure—using specialized GitHub Copilot agents working together.
 
 https://github.com/user-attachments/assets/f0529e70-f437-4a14-93bc-4ab5a0450540
 
@@ -197,17 +198,17 @@ When setting up the repository, specify the appropriate branch for your tech sta
 
 ```bash
 # General standards (always use main)
-git subtree add --prefix standards/general https://github.com/EmeaAppGbb/spec2win-guidelines.git main --squash
+git subtree add --prefix standards/general https://github.com/EmeaAppGbb/spec2cloud-guidelines.git main --squash
 
 # Backend standards - choose your stack
-git subtree add --prefix standards/backend https://github.com/EmeaAppGbb/spec2win-guidelines-backend.git dotnet --squash
+git subtree add --prefix standards/backend https://github.com/EmeaAppGbb/spec2cloud-guidelines-backend.git dotnet --squash
 # OR
-git subtree add --prefix standards/backend https://github.com/EmeaAppGbb/spec2win-guidelines-backend.git python --squash
+git subtree add --prefix standards/backend https://github.com/EmeaAppGbb/spec2cloud-guidelines-backend.git python --squash
 
 # Frontend standards - choose your framework
-git subtree add --prefix standards/frontend https://github.com/EmeaAppGbb/spec2win-guidelines-frontend.git react --squash
+git subtree add --prefix standards/frontend https://github.com/EmeaAppGbb/spec2cloud-guidelines-frontend.git react --squash
 # OR
-git subtree add --prefix standards/frontend https://github.com/EmeaAppGbb/spec2win-guidelines-frontend.git angular --squash
+git subtree add --prefix standards/frontend https://github.com/EmeaAppGbb/spec2cloud-guidelines-frontend.git angular --squash
 ```
 
 ### Updating Subtrees
@@ -216,13 +217,13 @@ To pull the latest changes from the upstream guideline repositories, use the sam
 
 ```bash
 # Update general standards
-git subtree pull --prefix standards/general https://github.com/EmeaAppGbb/spec2win-guidelines.git main --squash
+git subtree pull --prefix standards/general https://github.com/EmeaAppGbb/spec2cloud-guidelines.git main --squash
 
 # Update backend standards (use your chosen branch)
-git subtree pull --prefix standards/backend https://github.com/EmeaAppGbb/spec2win-guidelines-backend.git dotnet --squash
+git subtree pull --prefix standards/backend https://github.com/EmeaAppGbb/spec2cloud-guidelines-backend.git dotnet --squash
 
 # Update frontend standards (use your chosen branch)
-git subtree pull --prefix standards/frontend https://github.com/EmeaAppGbb/spec2win-guidelines-frontend.git react --squash
+git subtree pull --prefix standards/frontend https://github.com/EmeaAppGbb/spec2cloud-guidelines-frontend.git react --squash
 ```
 
 > **Note**: The `--squash` flag combines all commits from the subtree repository into a single commit, keeping the history clean.
@@ -237,7 +238,7 @@ git rm -r standards/frontend
 git commit -m "Remove React standards"
 
 # Add new subtree
-git subtree add --prefix standards/frontend https://github.com/EmeaAppGbb/spec2win-guidelines-frontend.git angular --squash
+git subtree add --prefix standards/frontend https://github.com/EmeaAppGbb/spec2cloud-guidelines-frontend.git angular --squash
 ```
 
 ## 🎓 Example Usage
