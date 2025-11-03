@@ -37,7 +37,7 @@ The `.vscode/mcp.json` configures **Model Context Protocol servers** that give a
 - **github** - Repository management and operations
 - **microsoft.docs.mcp** - Official Microsoft/Azure documentation
 - **playwright** - Browser automation capabilities
-- **deepcontext** - Repository context and understanding for external repos
+- **deepwiki** - Repository context and understanding for external repos
 
 ### AI Agents (Chat Modes)
 
