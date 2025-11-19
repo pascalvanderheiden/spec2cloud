@@ -44,6 +44,15 @@
 				"ms-dotnettools.csdevkit"
 			]
 		}
+	},
+
+	// Install APM CLI after container creation
+	"postCreateCommand": "pip install --user apm-cli && apm --version",
+
+	// Pass through GitHub tokens from local environment
+	"remoteEnv": {
+		"GITHUB_COPILOT_PAT": "${localEnv:GITHUB_COPILOT_PAT}",
+		"GITHUB_APM_PAT": "${localEnv:GITHUB_APM_PAT}"
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
