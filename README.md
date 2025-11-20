@@ -16,16 +16,55 @@ Both workflows use specialized GitHub Copilot agents working together to maintai
 
 ## 🚀 Quick Start
 
-### Greenfield (New Project)
-1. **Open in Dev Container** - Everything is preconfigured in `.devcontainer/`
-2. **Describe your app idea** - The more specific, the better
-3. **Follow the workflow** - Use the prompts to guide specialized agents through each phase
+### Option 1: Use This Repository as a Template (Full Environment)
 
-### Brownfield (Existing Codebase)
-1. **Open existing codebase** in Dev Container
-2. **Run `/rev-eng`** - Reverse engineer codebase into specs and documentation
-3. **Run `/modernize`** - (optional) Create modernization plan and tasks
-4. **Run `/plan`** - (optional) Execute modernization tasks planned by the modernization agent
+**Greenfield (New Project)**:
+1. **Use this repo as a template** - Click "Use this template" to create your own GitHub repository
+2. **Open in Dev Container** - Everything is preconfigured in `.devcontainer/`
+3. **Describe your app idea** - The more specific, the better
+4. **Follow the workflow** - Use the prompts to guide specialized agents through each phase
+
+**Brownfield (Existing Codebase)**:
+1. **Use this repo as a template** - Click "Use this template" to create your own GitHub repository
+2. **copy your existing codebase** into the new repository
+3. **Open in Dev Container** - Everything is preconfigured in `.devcontainer/`
+4. **Run `/rev-eng`** - Reverse engineer codebase into specs and documentation
+5. **Run `/modernize`** - (optional) Create modernization plan and tasks
+6. **Run `/plan`** - (optional) Execute modernization tasks planned by the modernization agent
+
+### Option 2: Install Into Existing Project
+
+Transform any existing project into a spec2cloud-enabled development environment:
+
+**One-Line Install** (Recommended):
+```bash
+curl -fsSL https://raw.githubusercontent.com/EmeaAppGbb/spec2cloud/main/scripts/quick-install.sh | bash
+```
+
+**Manual Install**:
+```bash
+# Download latest release
+curl -L https://github.com/EmeaAppGbb/spec2cloud/releases/latest/download/spec2cloud-full-latest.zip -o spec2cloud.zip
+unzip spec2cloud.zip -d spec2cloud
+cd spec2cloud
+
+# Run installer
+./scripts/install.sh --full                    # Linux/Mac
+.\scripts\install.ps1 -Full                    # Windows
+
+# Start using workflows
+code .
+# Use @pm, @dev, @azure agents and /prd, /frd, /plan, /deploy prompts
+```
+
+**What Gets Installed**:
+- ✅ 8 specialized AI agents (PM, Dev Lead, Dev, Azure, Rev-Eng, Modernizer, Planner, Architect)
+- ✅ 13 workflow prompts
+- ✅ MCP server configuration (optional)
+- ✅ Dev container setup (optional)
+- ✅ APM configuration (optional)
+
+See **[INTEGRATION.md](INTEGRATION.md)** for detailed installation options and troubleshooting.
 
 
 ## 🏗️ Architecture
